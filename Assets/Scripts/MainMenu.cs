@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class MainMenu : MonoBehaviour{
-
+public class MainMenu : MonoBehaviour
+{
     public static bool GameIsPaused = false;
-
     public GameObject pauseMenuUI;
-
     public string levelToLoad = "MainMenu";
 
-    void Update(){
-
+    void Update()
+    {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
@@ -25,7 +22,6 @@ public class MainMenu : MonoBehaviour{
                 Pause();
             }
         }
-        
     }
 
     public void Resume()
@@ -33,6 +29,10 @@ public class MainMenu : MonoBehaviour{
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+
+        // Restablece el cursor al estado por defecto
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Pause()
@@ -40,11 +40,14 @@ public class MainMenu : MonoBehaviour{
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+
+        // Permite que el cursor sea visible y desbloqueado en el menú de pausa
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void Quit()
     {
         SceneManager.LoadScene(levelToLoad);
     }
-
 }
