@@ -7,6 +7,9 @@ public class PlayerFOV : MonoBehaviour
     public Camera cameraMain;
     Plane[] cameraFrustum;
     Collider colliderMain;
+    public LayerMask enemyLayer;
+    public float fieldOfView = 90.0f;
+    public Animator aiAnim;
 
     public bool canSeeEnemy = false;
 
@@ -17,34 +20,25 @@ public class PlayerFOV : MonoBehaviour
 
     private void Update()
     {
-        var bounds = colliderMain.bounds;
-        cameraFrustum = GeometryUtility.CalculateFrustumPlanes(cameraMain);
-        if (GeometryUtility.TestPlanesAABB(cameraFrustum, bounds))
+        canSeeEnemy = false;
+        aiAnim.speed = 1.0f;
+
+        Vector3 playerPosition = transform.position;
+        Vector3 directionToPlayer = playerPosition - cameraMain.transform.position;
+        float angle = Vector3.Angle(directionToPlayer, cameraMain.transform.forward);
+
+        if (angle <= fieldOfView * 0.5f)
         {
-            // Use raycasting to check if there are any objects blocking the view
             RaycastHit hit;
-            if (Physics.Raycast(cameraMain.transform.position, transform.position - cameraMain.transform.position, out hit))
+
+            if (Physics.Raycast(cameraMain.transform.position, directionToPlayer, out hit, Mathf.Infinity, enemyLayer))
             {
                 if (hit.collider != null && hit.collider.gameObject.CompareTag("Enemy"))
                 {
                     canSeeEnemy = true;
+                    aiAnim.speed = 0.0f;
                 }
-                else
-                {
-                    canSeeEnemy = false;
-                }
-
-                // Draw a line to visualize the raycast
-                Debug.DrawLine(cameraMain.transform.position, hit.point, Color.red);
             }
-            else
-            {
-                canSeeEnemy = false;
-            }
-        }
-        else
-        {
-            canSeeEnemy = false;
         }
     }
 
