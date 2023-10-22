@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class EnemyMove : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class EnemyMove : MonoBehaviour
 
     NavMeshAgent agent;
     PlayerFOV playerFOV;
+    public Animator aiAnim;
+    public string deathScene;
+    public Camera jumpscareCamera;
+    public float jumpscareTime;
 
     private void Start()
     {
@@ -29,9 +34,17 @@ public class EnemyMove : MonoBehaviour
         }
 
         float DistanceToPlayer = Vector3.Distance(Player.position, transform.position);
-        if (DistanceToPlayer < 2)
+        if (DistanceToPlayer < 2 && playerFOV.canSeeEnemy == false)
         {
-            //Attack uwu
+            aiAnim.SetTrigger("jumpscare");
+            StartCoroutine(deathRoutine());
         }
+    }
+
+    IEnumerator deathRoutine()
+    {
+        jumpscareCamera.gameObject.SetActive(true);
+        yield return new WaitForSeconds(jumpscareTime);
+        SceneManager.LoadScene(deathScene);
     }
 }
