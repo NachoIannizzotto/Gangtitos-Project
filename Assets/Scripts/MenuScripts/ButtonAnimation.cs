@@ -9,6 +9,7 @@ public class ButtonAnimation : MonoBehaviour
     public TextMeshProUGUI messageText;
     public TextMeshProUGUI messageText2;
     public TextMeshProUGUI messageText3;
+    public TextMeshProUGUI messageText4;
     public float delayBeforeAppear = 3.0f; // Retraso en segundos antes de que aparezca el mensaje
     public float appearDuration = 2.0f; // Duración de la aparición en segundos
 
@@ -20,6 +21,7 @@ public class ButtonAnimation : MonoBehaviour
         messageText.alpha = 0f; // Inicialmente, el mensaje está completamente transparente
         messageText2.alpha = 0f;
         messageText3.alpha = 0f;
+        messageText4.alpha = 0f;
     }
 
     private void Update()
@@ -37,6 +39,7 @@ public class ButtonAnimation : MonoBehaviour
             messageText.alpha = t;
             messageText2.alpha = t;
             messageText3.alpha = t;
+            messageText4.alpha = t;
         }
     }
 }
