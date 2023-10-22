@@ -2213,7 +2213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 6817638360946227546}
   aiAnim: {fileID: 2126581086712839988}
-  deathScene: TestLevel
+  deathScene: DeathCanvas
   jumpscareCamera: {fileID: 1635784038}
   jumpscareTime: 3
 --- !u!114 &526695644
@@ -2294,7 +2294,7 @@ MonoBehaviour:
   player: {fileID: 6817638360946227546}
   cam: {fileID: 6817638361276328089}
   rayCastOffset: {x: 0, y: 1, z: 0}
-  deathScene: TestLevel
+  deathScene: DeathCanvas
   jumpscareCamera: {fileID: 1206716189}
   aiDistance: 0
 --- !u!195 &544779654
@@ -32666,13 +32666,13 @@ MonoBehaviour:
   lockAndHideMouse: 1
   autoGenerateCrosshair: 1
   showCrosshairIn3rdPerson: 0
-  drawPrimitiveUI: 1
+  drawPrimitiveUI: 0
   crosshairSprite: {fileID: 0}
   cameraPerspective: 0
   automaticallySwitchPerspective: 0
   perspectiveSwitchingKey_L: 0
   mouseInputInversion: 0
-  Sensitivity: 7
+  Sensitivity: 9
   rotationWeight: 3
   verticalRotationRange: 180
   standingEyeHeight: 0.8

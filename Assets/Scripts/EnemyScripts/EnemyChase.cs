@@ -148,6 +148,8 @@ public class EnemyChase : MonoBehaviour
     {
         jumpscareCamera.gameObject.SetActive(true);
         yield return new WaitForSeconds(jumpscareTime);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         SceneManager.LoadScene(deathScene);
     }
 }
