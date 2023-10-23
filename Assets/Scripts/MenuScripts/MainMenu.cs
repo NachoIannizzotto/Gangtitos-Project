@@ -49,5 +49,8 @@ public class MainMenu : MonoBehaviour
     public void Quit()
     {
         SceneManager.LoadScene(levelToLoad);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        pauseMenuUI.SetActive(false);
     }
 }
