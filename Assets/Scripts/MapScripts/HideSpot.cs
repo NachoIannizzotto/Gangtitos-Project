@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class HideSpot : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class HideSpot : MonoBehaviour
     bool interactable, hiding;
     public float loseDistance;
     public roomDetector detector;
+    public PlayerFOV playerFov;
+    public EnemyMove enemyMove;
+    public NavMeshAgent navMeshAgent;
+    public Animator aiAnim;
 
     void Start()
     {
@@ -63,6 +68,10 @@ public class HideSpot : MonoBehaviour
                 normalPlayer.SetActive(false);
                 PlayerCam.SetActive(false);
                 interactable = false;
+                playerFov.enabled = false;
+                enemyMove.enabled = false;
+                navMeshAgent.enabled = false;
+                aiAnim.speed = 0.0f;
             }
         }
         if(hiding == true)
@@ -75,6 +84,10 @@ public class HideSpot : MonoBehaviour
                 HidePlayerCam.SetActive(false);
                 hidingPlayer.SetActive(false);
                 hiding = false;
+                playerFov.enabled = true;
+                enemyMove.enabled = true;
+                navMeshAgent.enabled = true;
+                aiAnim.speed = 1.0f;
             }
         }
     }

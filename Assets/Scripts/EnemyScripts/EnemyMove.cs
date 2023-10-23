@@ -15,10 +15,21 @@ public class EnemyMove : MonoBehaviour
     public Camera jumpscareCamera;
     public float jumpscareTime;
 
+    private AudioSource audioSource;
+    public AudioClip[] soundClips;  // Arreglo de clips de sonido
+    public float minTimeBetweenSounds = 10.0f;
+    public float maxTimeBetweenSounds = 20.0f;
+
+    private float nextSoundTime;
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         playerFOV = GetComponent<PlayerFOV>();
+        audioSource = GetComponent<AudioSource>();
+
+        // Configura el tiempo inicial para reproducir un sonido.
+        nextSoundTime = Time.time + Random.Range(minTimeBetweenSounds, maxTimeBetweenSounds);
     }
 
     private void Update()
@@ -39,10 +50,29 @@ public class EnemyMove : MonoBehaviour
             aiAnim.SetTrigger("jumpscare");
             StartCoroutine(deathRoutine());
         }
+
+        // Reproduce un sonido si ha pasado el tiempo para hacerlo.
+        if (Time.time >= nextSoundTime)
+        {
+            PlayRandomSound();
+            // Configura el próximo tiempo de reproducción de sonido.
+            nextSoundTime = Time.time + Random.Range(minTimeBetweenSounds, maxTimeBetweenSounds);
+        }
+    }
+
+    void PlayRandomSound()
+    {
+        if (soundClips.Length > 0)
+        {
+            int randomIndex = Random.Range(0, soundClips.Length);
+            audioSource.clip = soundClips[randomIndex];
+            audioSource.Play();
+        }
     }
 
     IEnumerator deathRoutine()
     {
+        playerFOV.enabled = false;
         jumpscareCamera.gameObject.SetActive(true);
         yield return new WaitForSeconds(jumpscareTime);
         Cursor.lockState = CursorLockMode.None;
