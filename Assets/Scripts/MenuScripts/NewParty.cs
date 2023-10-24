@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class NewParty : MonoBehaviour
 {
-    public void LoadScene(string sceneName)
+    public void LoadScene()
     {
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine("start");
+    }
+
+    public IEnumerator start()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("TestLevel");
     }
 }
