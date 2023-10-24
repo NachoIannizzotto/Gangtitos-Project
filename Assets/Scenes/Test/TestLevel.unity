@@ -7973,6 +7973,134 @@ Transform:
   m_Father: {fileID: 439210881}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1869656710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1869656712}
+  - component: {fileID: 1869656711}
+  m_Layer: 0
+  m_Name: Ambience
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1869656711
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869656710}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 1830813219138227673, guid: 65de7430c462dc84c8c16083ccb14501, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 5c5b0bbcc3b382045b2260d749b79d11, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.25
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1869656712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869656710}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24.796381, y: -0.5145764, z: -77.787575}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1870843988
 GameObject:
   m_ObjectHideFlags: 0
@@ -33107,12 +33235,12 @@ MonoBehaviour:
   mouseInputInversion: 0
   Sensitivity: 9
   rotationWeight: 3
-  verticalRotationRange: 180
+  verticalRotationRange: 170
   standingEyeHeight: 0.8
   crouchingEyeHeight: 0.25
   viewInputMethods: 0
-  FOVKickAmount: 10
-  FOVSensitivityMultiplier: 0.5
+  FOVKickAmount: 5
+  FOVSensitivityMultiplier: 0
   rotateCharacterToCameraForward: 0
   maxCameraDistance: 8
   cameraObstructionIgnore:
@@ -33124,11 +33252,11 @@ MonoBehaviour:
   enableMovementControl: 1
   walkingSpeed: 200
   sprintingSpeed: 575
-  crouchingSpeed: 45
+  crouchingSpeed: 150
   decelerationSpeed: 240
   sprintKey_L: 304
   crouchKey_L: 306
-  slideKey_L: 118
+  slideKey_L: 99
   canSprint: 1
   isSprinting: 0
   toggleSprint: 0
@@ -33139,7 +33267,7 @@ MonoBehaviour:
   crouchOverride: 0
   isIdle: 0
   currentStance: 0
-  stanceTransitionSpeed: 5
+  stanceTransitionSpeed: 8
   crouchingHeight: 0.8
   currentGroundMovementSpeed: 1
   whatIsGround:
@@ -33151,18 +33279,18 @@ MonoBehaviour:
   stepUpSpeed: 0.2
   canJump: 1
   holdJump: 0
-  jumpEnhancements: 0
+  jumpEnhancements: 1
   Jumped: 0
   jumpKey_L: 32
-  jumpPower: 40
+  jumpPower: 60
   airControlFactor: 1
   decentMultiplier: 2.5
   tapJumpMultiplier: 2.1
   isSliding: 0
   canSlide: 1
-  slidingDeceleration: 78
-  slidingTransitionSpeed: 4
-  maxFlatSlideDistance: 10
+  slidingDeceleration: 50
+  slidingTransitionSpeed: 10
+  maxFlatSlideDistance: 15
   currentGroundInfo:
     isInContactWithGround: 0
     isGettingGroundInfo: 0
@@ -33213,9 +33341,9 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 73f938638097f8042ad7842aa5b04ac5, type: 3}
     - {fileID: 8300000, guid: e06c6ae1948cafd45a952ab85ebe4fa7, type: 3}
   enableHeadbob: 1
-  headbobSpeed: 1.8
+  headbobSpeed: 2
   headbobPower: 5
-  ZTilt: 3
+  ZTilt: 4
   enableSurvivalStats: 0
   defaultSurvivalStats:
     Health: 250
