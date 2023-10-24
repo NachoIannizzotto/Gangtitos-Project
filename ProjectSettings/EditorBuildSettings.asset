@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/DeathCanvasC.unity
     guid: 79ffc0105671b58428cfbeeff05bc6d6
+  - enabled: 1
+    path: Assets/Scenes/Test/Introduction.unity
+    guid: 48a162df4f941ba498a5fe20a2a4cb3a
   m_configObjects: {}
