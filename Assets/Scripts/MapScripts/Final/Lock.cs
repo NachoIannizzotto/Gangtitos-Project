@@ -11,6 +11,21 @@ public class Lock : MonoBehaviour, IInteractable
     public static int unlockedLocks = 0;
     public AudioSource doorSource;
 
+    private ResetLocksManager gameManager;
+
+    void Awake()
+    {
+        gameManager = FindObjectOfType<ResetLocksManager>();
+        if (gameManager == null)
+        {
+            Debug.LogError("No se encontró un objeto ResetLocksManager en la escena.");
+        }
+        else
+        {
+            gameManager.ResetLocks();
+        }
+    }
+
     public bool Interact()
     {
         if (!lockOpen)
@@ -19,14 +34,13 @@ public class Lock : MonoBehaviour, IInteractable
             {
                 StartCoroutine(OpenLock());
                 lockOpen = true;
-                unlockedLocks++;
+                gameManager.unlockedLocks++;
 
-                if (unlockedLocks >= 4)
+                if (gameManager.unlockedLocks == 4)
                 {
                     OpenDoor();
                 }
 
-                // Restar una llave del contador
                 CollectableCounter.instance.RemoveFromCount();
 
                 return true;
