@@ -9,12 +9,12 @@ public class Lock : MonoBehaviour, IInteractable
 
     public GameObject door;
     public static int unlockedLocks = 0;
+    public AudioSource doorSource;
 
     public bool Interact()
     {
         if (!lockOpen)
         {
-            // Verificar si el jugador tiene al menos una llave
             if (CollectableCounter.instance != null && CollectableCounter.instance.GetCurrentCount() > 0)
             {
                 StartCoroutine(OpenLock());
@@ -33,7 +33,6 @@ public class Lock : MonoBehaviour, IInteractable
             }
             else
             {
-                // El jugador no tiene llaves, no hacer nada
                 return false;
             }
         }
@@ -45,6 +44,7 @@ public class Lock : MonoBehaviour, IInteractable
     {
         if (door != null)
         {
+            doorSource.Play();
             door.SetActive(false);
         }
     }

@@ -1,47 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class EnemyFootsteps : MonoBehaviour
+public class EnemyFootsteps: MonoBehaviour
 {
-    [SerializeField] private Transform player;
-    public AudioClip[] footstepClips;
-    public float minTimeBetweenFootsteps = 1.0f;
-    public float maxTimeBetweenFootsteps = 2.0f;
+    public Transform player; // Arrastra el objeto del jugador aquí en el Inspector.
+    public NavMeshAgent enemyAgent; // Asegúrate de que el enemigo tiene un componente NavMeshAgent asignado.
 
-    private AudioSource audioSource;
-    private PlayerFOV playerFOV;
-    private float nextFootstepTime;
+    public AudioSource footstepAudioSource; // Asigna el componente AudioSource para los sonidos de pasos en el Inspector.
+    public AudioClip[] footstepSounds; // Array de sonidos de pasos.
 
-    private void Start()
+    public float minDistanceToPlayer = 10f; // Define la distancia mínima para empezar a reproducir sonidos de pasos aleatorios.
+
+    PlayerFOV playerFOV; // Referencia al script PlayerFOV.
+
+    void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        playerFOV = player.GetComponent<PlayerFOV>(); // Obtén el PlayerFOV del jugador.
-        nextFootstepTime = Time.time + Random.Range(minTimeBetweenFootsteps, maxTimeBetweenFootsteps);
+        // Accede al script PlayerFOV en el jugador.
+        playerFOV = GetComponent<PlayerFOV>();
     }
 
-    private void Update()
+    void Update()
     {
-        float distanceToPlayer = Vector3.Distance(player.position, transform.position);
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        if (!playerFOV.canSeeEnemy && distanceToPlayer < 8)
+        // Utiliza la variable canSeeEnemy del script PlayerFOV para verificar si el jugador puede ver al enemigo.
+        if (!playerFOV.canSeeEnemy && distanceToPlayer < minDistanceToPlayer)
         {
-            if (Time.time >= nextFootstepTime)
+            if (!footstepAudioSource.isPlaying)
             {
-                PlayRandomFootstepSound();
-                nextFootstepTime = Time.time + Random.Range(minTimeBetweenFootsteps, maxTimeBetweenFootsteps);
+                int randomSoundIndex = Random.Range(0, footstepSounds.Length);
+                footstepAudioSource.clip = footstepSounds[randomSoundIndex];
+                footstepAudioSource.Play();
             }
         }
-    }
-
-    private void PlayRandomFootstepSound()
-    {
-        if (footstepClips.Length > 0)
+        else
         {
-            int randomIndex = Random.Range(0, footstepClips.Length);
-            audioSource.clip = footstepClips[randomIndex];
-            audioSource.Play();
+            footstepAudioSource.Stop();
         }
     }
 }
+
+
+
 
