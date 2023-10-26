@@ -8,10 +8,15 @@ public class Candado : MonoBehaviour
 
     private Contador contador;
 
+    public AudioClip keylocker;
+    public AudioSource audioSource1;
+
     private void Start()
     {
         GameObject jugador = GameObject.FindGameObjectWithTag("Player");
         contador = jugador.GetComponent<Contador>();
+        audioSource1 = GetComponent<AudioSource>();
+        audioSource1.clip = keylocker;
     }
 
     private void Update()
@@ -19,10 +24,16 @@ public class Candado : MonoBehaviour
 
         if (contador != null && contador.GetContador() >= cantidadNecesaria)
         {
-
-            Destroy(gameObject);
+            audioSource1.Play();
+            StartCoroutine(unlockRoutine());
 
         }
+    }
+
+    IEnumerator unlockRoutine()
+    {
+        yield return new WaitForSeconds(2.0f);
+        Destroy(gameObject);
     }
 
 }
