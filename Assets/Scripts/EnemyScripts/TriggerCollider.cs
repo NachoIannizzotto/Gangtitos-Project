@@ -11,6 +11,11 @@ public class TriggerCollider : MonoBehaviour
     public GameObject meshObject;  // El GameObject que contiene el Mesh Renderer
     public GameObject player;
     public GameObject playerSprint;
+    public GameObject Chaser1;
+    public GameObject Chaser2;
+    public GameObject Chaser3;
+    public GameObject Chaser4;
+    public GameObject Mannequin;
 
     private bool triggered = false;
 
@@ -21,6 +26,11 @@ public class TriggerCollider : MonoBehaviour
             // Activa el MeshRenderer del hijo
             meshObject.SetActive(true);
             player.SetActive(false);
+            Destroy(Chaser1);
+            Destroy(Chaser2);
+            Destroy(Chaser3);
+            Destroy(Chaser4);
+            Destroy(Mannequin);
 
             // Activa el AudioSource para la música
             audioSource.Play();
