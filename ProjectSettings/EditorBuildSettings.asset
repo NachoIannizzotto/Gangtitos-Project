@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Test/TestLevel.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
+    path: Assets/Scenes/Menu/Ending.unity
+    guid: 5ea178d266bb03d4fbc4f036a4000b8e
+  - enabled: 1
     path: Assets/Scenes/Menu/DeathCanvasM.unity
     guid: 483386048440a1d4d969a034c625a389
   - enabled: 1

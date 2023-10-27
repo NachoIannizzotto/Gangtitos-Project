@@ -10,6 +10,7 @@ public class TriggerCollider : MonoBehaviour
     public Animator cinematicAnimator;  // El Animator para la animación "cinemática"
     public GameObject meshObject;  // El GameObject que contiene el Mesh Renderer
     public GameObject player;
+    public GameObject playerSprint;
 
     private bool triggered = false;
 
@@ -37,7 +38,7 @@ public class TriggerCollider : MonoBehaviour
     private IEnumerator ActivateEnemyAfterDelay()
     {
         yield return new WaitForSeconds(activationDelay);
-        player.SetActive(true);
+        playerSprint.SetActive(true);
         // Llama a la función ActivateEnemy en el script del enemigo
         enemy.GetComponent<ChaserF>().ActivateEnemy();
     }

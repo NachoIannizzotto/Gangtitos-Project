@@ -6,7 +6,7 @@ public class Background : MonoBehaviour
 {
     public float transitionDuration = 2.0f;
     private CanvasRenderer canvasRenderer;
-    private Color startColor = Color.red;
+    private Color startColor = Color.white;
     private Color targetColor = new Color(0, 0, 0, 0); // Color negro con alpha 0
     private float currentTime = 0.0f;
 
