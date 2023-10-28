@@ -15,8 +15,8 @@ public class EnemyMove : MonoBehaviour
     public Camera jumpscareCamera;
     public float jumpscareTime;
 
-    private AudioSource audioSource;
-    public AudioClip[] soundClips;  // Arreglo de clips de sonido
+    public AudioSource customAudioSource;
+    public AudioClip[] soundClips;
     public float minTimeBetweenSounds = 10.0f;
     public float maxTimeBetweenSounds = 20.0f;
 
@@ -25,10 +25,8 @@ public class EnemyMove : MonoBehaviour
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        playerFOV = GetComponent<PlayerFOV>();
-        audioSource = GetComponent<AudioSource>();
+        playerFOV = GetComponent <PlayerFOV>();
 
-        // Configura el tiempo inicial para reproducir un sonido.
         nextSoundTime = Time.time + Random.Range(minTimeBetweenSounds, maxTimeBetweenSounds);
     }
 
@@ -51,16 +49,14 @@ public class EnemyMove : MonoBehaviour
             StartCoroutine(deathRoutine());
         }
 
-        // Reproduce un sonido si ha pasado el tiempo para hacerlo.
         if (Time.time >= nextSoundTime)
         {
-            PlayRandomSound();
-            // Configura el próximo tiempo de reproducción de sonido.
+            PlayRandomSound(customAudioSource);
             nextSoundTime = Time.time + Random.Range(minTimeBetweenSounds, maxTimeBetweenSounds);
         }
     }
 
-    void PlayRandomSound()
+    void PlayRandomSound(AudioSource audioSource)
     {
         if (soundClips.Length > 0)
         {
@@ -81,3 +77,4 @@ public class EnemyMove : MonoBehaviour
         SceneManager.LoadScene(deathScene);
     }
 }
+

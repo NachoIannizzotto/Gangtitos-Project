@@ -6649,7 +6649,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3234957602433455613, guid: 955e0b55b2252274b99864498e40dd6f, type: 3}
       propertyPath: m_text
-      value: como he vuelto aqui?
+      value: Nobody was here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3234957602433455613, guid: 955e0b55b2252274b99864498e40dd6f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 955e0b55b2252274b99864498e40dd6f, type: 3}
