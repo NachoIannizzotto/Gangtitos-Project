@@ -48,6 +48,7 @@ public class MainMenu : MonoBehaviour
 
     public void Quit()
     {
+        MusicManager.instance.DestroyMusicManager();
         SceneManager.LoadScene(levelToLoad);
         Time.timeScale = 1f;
         GameIsPaused = false;
