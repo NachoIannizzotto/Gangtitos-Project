@@ -77,6 +77,7 @@ public class EnemyMove : MonoBehaviour
         yield return new WaitForSeconds(jumpscareTime);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        MusicManager.instance.DestroyMusicManager();
         SceneManager.LoadScene(deathScene);
     }
 }

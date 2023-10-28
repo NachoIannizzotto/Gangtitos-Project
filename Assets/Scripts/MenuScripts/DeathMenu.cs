@@ -10,11 +10,13 @@ public class DeathMenu : MonoBehaviour
 
     public void LoadSceneOnClick1()
     {
+        MusicManager.instance.DestroyMusicManager();
         SceneManager.LoadScene(scene1);
     }
 
     public void LoadSceneOnClick2()
     {
+        MusicManager.instance.DestroyMusicManager();
         SceneManager.LoadScene(scene2);
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class TeleportToAnotherLevel : MonoBehaviour
 {
     public string levelToLoad;
+    public AudioClip newMusic;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,6 +14,7 @@ public class TeleportToAnotherLevel : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            MusicManager.instance.PlayMusic(newMusic);
             SceneManager.LoadScene(levelToLoad);
         }
     }
