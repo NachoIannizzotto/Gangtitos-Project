@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EndAngleFade: 180
   m_UVScale: {x: 1, y: 1}
   m_UVBias: {x: 0, y: 0}
-  m_ScaleMode: 0
+  m_ScaleMode: 1
   m_Offset: {x: 0, y: 0, z: 0.5}
   m_Size: {x: 1, y: 1, z: 1}
   m_FadeFactor: 1
@@ -66,6 +66,7 @@ GameObject:
   - component: {fileID: 4067491937072878266}
   - component: {fileID: 8616421934261905490}
   - component: {fileID: 4725954888219355220}
+  - component: {fileID: 4054841804700160451}
   m_Layer: 0
   m_Name: tape2
   m_TagString: Untagged
@@ -138,6 +139,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4054841804700160451
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2879820521129363882}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4411417427334717858, guid: bf6c0025c0a65244e9be61fcfac09a55, type: 3}
 --- !u!1 &3059743104647766759
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,6 +162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2395269076844509277}
+  - component: {fileID: 724161300141687223}
   m_Layer: 0
   m_Name: decalBox
   m_TagString: Untagged
@@ -163,8 +179,8 @@ Transform:
   m_GameObject: {fileID: 3059743104647766759}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -22.002857, y: 1, z: 24.97988}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2748495105038491179}
   - {fileID: 7934161588529134654}
@@ -175,6 +191,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &724161300141687223
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059743104647766759}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0601807, y: 5.340502, z: 2.0768204}
+  m_Center: {x: -0.00623703, y: 1.6588702, z: 0.006164551}
 --- !u!1 &3948114571613750478
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +215,7 @@ GameObject:
   - component: {fileID: 2748495105038491179}
   - component: {fileID: 3661881342070120886}
   - component: {fileID: 3542979461996684459}
+  - component: {fileID: 4944610974728786289}
   m_Layer: 0
   m_Name: box
   m_TagString: Untagged
@@ -258,6 +288,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4944610974728786289
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3948114571613750478}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 9009893830714642796, guid: bf6c0025c0a65244e9be61fcfac09a55, type: 3}
 --- !u!1 &4577331338464543956
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +313,7 @@ GameObject:
   - component: {fileID: 7934161588529134654}
   - component: {fileID: 1923652890609237406}
   - component: {fileID: 3224590358187081803}
+  - component: {fileID: 1602498744092357661}
   m_Layer: 0
   m_Name: tape1
   m_TagString: Untagged
@@ -341,6 +386,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1602498744092357661
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4577331338464543956}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7684335917991818238, guid: bf6c0025c0a65244e9be61fcfac09a55, type: 3}
 --- !u!1 &8284497173764244637
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +451,7 @@ MonoBehaviour:
   m_EndAngleFade: 180
   m_UVScale: {x: 1, y: 1}
   m_UVBias: {x: 0, y: 0}
-  m_ScaleMode: 0
+  m_ScaleMode: 1
   m_Offset: {x: -0.03423214, y: 0, z: 0.5}
   m_Size: {x: 1.8977795, y: 1, z: 1}
   m_FadeFactor: 1
@@ -407,6 +466,7 @@ GameObject:
   - component: {fileID: 4725660315830821992}
   - component: {fileID: 7607695209316490439}
   - component: {fileID: 8558916531718514677}
+  - component: {fileID: 3606448322226107748}
   m_Layer: 0
   m_Name: tape3
   m_TagString: Untagged
@@ -479,3 +539,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3606448322226107748
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8862268233439229072}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7323764716532666218, guid: bf6c0025c0a65244e9be61fcfac09a55, type: 3}
