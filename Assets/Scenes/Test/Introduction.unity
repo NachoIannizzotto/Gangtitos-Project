@@ -596,8 +596,8 @@ MonoBehaviour:
   texto4: {fileID: 1376446806}
   tiempoTexto1: 4
   tiempoTexto2: 10
-  tiempoTexto3: 14
-  tiempoTexto4: 18
+  tiempoTexto3: 16
+  tiempoTexto4: 20
 --- !u!1 &727952504
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +901,7 @@ MonoBehaviour:
   text: {fileID: 0}
   tmpProText: {fileID: 1367508409}
   delayBeforeStart: 14
-  timeBtwChars: 0.05
+  timeBtwChars: 0.04
   leadingChar: 
   leadingCharBeforeDelay: 1
   startOnEnable: 1
@@ -928,9 +928,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Appear somewhere else. Being in an unexpected place. Walking without knowing
-    where to go. Everything can change in the blink of an eye. Anything can happen
-    where kenopsia prevails.
+  m_text: 'In the blink of an eye, I found myself trapped in a dark, unknown place.
+    Shadows closed in around me, and whispers of history echoed in every corner.
+    I was alone, or so I thought...
+
+
+    My only hope was to unravel the hidden
+    mysteries in the shadows to find the way out before darkness consumed me entirely.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
   m_sharedMaterial: {fileID: 5774117657719988604, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
@@ -1060,7 +1064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 0}
   tmpProText: {fileID: 1376446806}
-  delayBeforeStart: 28
+  delayBeforeStart: 30
   timeBtwChars: 0.05
   leadingChar: 
   leadingCharBeforeDelay: 1
@@ -1088,11 +1092,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'USE WASD TO MOVE, MOUSE TO LOOK AROUND, SHIFT TO RUN AND C TO CROUCH.
+  m_text: 'USE wasd TO MOVE, mouse TO LOOK AROUND, shift TO RUN AND c TO CROUCH.
 
-    
 
-    
+
+
 
     DON''T
     LET ANYONE CATCH YOU AND PAY ATTENTION TO THE SOUNDS, LOOK FOR AN EXIT.'

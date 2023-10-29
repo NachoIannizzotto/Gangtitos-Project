@@ -7879,7 +7879,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 1830813219138227673, guid: 65de7430c462dc84c8c16083ccb14501, type: 2}
   m_audioClip: {fileID: 8300000, guid: e573129396dad314598165376c8ac5c4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9548,17 +9548,17 @@ MonoBehaviour:
   - {fileID: 1249850688}
   aiAnim: {fileID: 185463489}
   walkSpeed: 4
-  chaseSpeed: 10
+  chaseSpeed: 9.8
   minIdleTime: 1
-  maxIdleTime: 3
+  maxIdleTime: 2
   idleTime: 0
-  detectionDistance: 18
+  detectionDistance: 16
   catchDistance: 2
-  searchDistance: 17
+  searchDistance: 15
   minChaseTime: 1.5
   maxChaseTime: 3
   minSearchTime: 1
-  maxSearchTime: 2
+  maxSearchTime: 3
   jumpscareTime: 1.2
   walking: 0
   chasing: 0
@@ -16129,7 +16129,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 1830813219138227673, guid: 65de7430c462dc84c8c16083ccb14501, type: 2}
   m_audioClip: {fileID: 8300000, guid: e573129396dad314598165376c8ac5c4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -18006,17 +18006,17 @@ MonoBehaviour:
   - {fileID: 118898371}
   aiAnim: {fileID: 638768372}
   walkSpeed: 4
-  chaseSpeed: 10
+  chaseSpeed: 9.8
   minIdleTime: 1
-  maxIdleTime: 3
+  maxIdleTime: 2
   idleTime: 0
-  detectionDistance: 18
+  detectionDistance: 16
   catchDistance: 2
-  searchDistance: 17
+  searchDistance: 15
   minChaseTime: 1.5
   maxChaseTime: 3
   minSearchTime: 1
-  maxSearchTime: 2
+  maxSearchTime: 3
   jumpscareTime: 1.2
   walking: 0
   chasing: 0
@@ -22873,7 +22873,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 1830813219138227673, guid: 65de7430c462dc84c8c16083ccb14501, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -23423,17 +23423,17 @@ MonoBehaviour:
   - {fileID: 1791712972}
   aiAnim: {fileID: 9206644779760666619}
   walkSpeed: 4
-  chaseSpeed: 10
+  chaseSpeed: 9.8
   minIdleTime: 1
-  maxIdleTime: 3
+  maxIdleTime: 2
   idleTime: 0
-  detectionDistance: 18
+  detectionDistance: 16
   catchDistance: 2
-  searchDistance: 17
+  searchDistance: 15
   minChaseTime: 1.5
   maxChaseTime: 3
   minSearchTime: 1
-  maxSearchTime: 2
+  maxSearchTime: 3
   jumpscareTime: 1.2
   walking: 0
   chasing: 0
@@ -30319,7 +30319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &722877729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34209,6 +34209,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2323009154697542606, guid: e2a8b9fb568e1b949923f50af3dc7659, type: 3}
+      propertyPath: m_text
+      value: RUN
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a8b9fb568e1b949923f50af3dc7659, type: 3}
 --- !u!1 &808423893
@@ -37538,7 +37542,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 1830813219138227673, guid: 65de7430c462dc84c8c16083ccb14501, type: 2}
   m_audioClip: {fileID: 8300000, guid: e573129396dad314598165376c8ac5c4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -78442,7 +78446,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 1830813219138227673, guid: 65de7430c462dc84c8c16083ccb14501, type: 2}
   m_audioClip: {fileID: 8300000, guid: e573129396dad314598165376c8ac5c4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -81347,17 +81351,17 @@ MonoBehaviour:
   - {fileID: 282016280}
   aiAnim: {fileID: 655458396}
   walkSpeed: 4
-  chaseSpeed: 10
+  chaseSpeed: 9.8
   minIdleTime: 1
-  maxIdleTime: 3
+  maxIdleTime: 2
   idleTime: 0
-  detectionDistance: 18
+  detectionDistance: 16
   catchDistance: 2
-  searchDistance: 17
+  searchDistance: 15
   minChaseTime: 1.5
   maxChaseTime: 3
   minSearchTime: 1
-  maxSearchTime: 2
+  maxSearchTime: 3
   jumpscareTime: 1.2
   walking: 0
   chasing: 0
