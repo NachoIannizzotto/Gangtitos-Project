@@ -278,7 +278,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ESCAPASTE
+  m_text: YOU ESCAPED
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
   m_sharedMaterial: {fileID: 5774117657719988604, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
@@ -413,7 +413,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: VOLVER AL MENU
+  m_text: MAIN MENU
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
   m_sharedMaterial: {fileID: 5774117657719988604, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
@@ -440,8 +440,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 149
-  m_fontSizeBase: 149
+  m_fontSize: 120
+  m_fontSizeBase: 120
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -855,7 +855,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: POR AHORA
+  m_text: FOR NOW
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
   m_sharedMaterial: {fileID: 5774117657719988604, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
@@ -1320,8 +1320,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5648953}
   m_AnchorMax: {x: 0.65087646, y: 0.6788953}
-  m_AnchoredPosition: {x: 0.23901367, y: -177}
-  m_SizeDelta: {x: 0.3269, y: 1.1600037}
+  m_AnchoredPosition: {x: -99.36624, y: -217.63576}
+  m_SizeDelta: {x: -198.7277, y: 193.6785}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1353143669
 MonoBehaviour:
@@ -1343,9 +1343,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "NO SABES COMO TERMINASTE AHI, PERO SI SABES UNA COSA, ESTAS A SALVO POR
-    EL MOMENTO, LO QUE SEA QUE TE ESTABA PERSIGUIENDO SE HA IDO.\n\nPARECIERA QUE
-    ESTAS EN UN LUGAR SEGURO PERO... \nSE ESCUCHAN SONIDOS DE UNA ZONA DE JUEGOS?"
+  m_text: YOU DON'T KNOW HOW YOU ENDED UP THERE, BUT YOU KNOW ONE THING, YOU ARE
+    SAFE FOR THE MOMENT, WHATEVER WAS CHASING YOU IS GONE. DON'T BE EXCITED, YOU
+    STILL HAVE A LOT LEFT TO GET OUT OF KENOPSIA.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
   m_sharedMaterial: {fileID: 5774117657719988604, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
@@ -1408,7 +1408,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.8178713, y: -2.1405869, z: 128.99133, w: -0.572752}
+  m_margin: {x: 0.8178713, y: -2.1405869, z: -1.5976259, w: -0.572752}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

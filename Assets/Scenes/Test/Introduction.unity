@@ -204,8 +204,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: La kenopsia es la experiencia vinculada a un sentimiento de inquietud ante
-    un lugar vacio que suele estar lleno de gente.
+  m_text: Kenopsia is the experience linked to a feeling of restlessness in an empty
+    place that is usually full of people.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
   m_sharedMaterial: {fileID: 5774117657719988604, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
@@ -928,9 +928,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Aparecer en otro sitio. Estar en un lugar impensado. Caminar sin saber
-    adonde ir. Todo puede cambiar en un parpadeo. Todo puede ocurrir donde impera
-    la kenopsia.
+  m_text: Appear somewhere else. Being in an unexpected place. Walking without knowing
+    where to go. Everything can change in the blink of an eye. Anything can happen
+    where kenopsia prevails.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
   m_sharedMaterial: {fileID: 5774117657719988604, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
@@ -1088,13 +1088,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'UTILIZA WASD PARA MOVERTE, EL MOUSE PARA MIRAR ALREDEDOR, SHIFT PARA CORRER,
-    CTRL PARA AGACHARTE Y C PARA DESLIZARTE.
+  m_text: 'USE WASD TO MOVE, MOUSE TO LOOK AROUND, SHIFT TO RUN AND C TO CROUCH.
 
+    
 
+    
 
-    NO DEJES QUE NADIE TE ATRAPE
-    Y PRESTA ATENCION A LOS SONIDOS, BUSCA UNA SALIDA.'
+    DON''T
+    LET ANYONE CATCH YOU AND PAY ATTENTION TO THE SOUNDS, LOOK FOR AN EXIT.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
   m_sharedMaterial: {fileID: 5774117657719988604, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
@@ -1354,7 +1355,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PRESIONA ESPACIO PARA SALTAR
+  m_text: PRESS SPACE TO SKIP
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
   m_sharedMaterial: {fileID: 5774117657719988604, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}

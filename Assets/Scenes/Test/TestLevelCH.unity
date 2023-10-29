@@ -7062,6 +7062,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2739522383960950798, guid: 955e0b55b2252274b99864498e40dd6f, type: 3}
+      propertyPath: Stamina
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739522383960950798, guid: 955e0b55b2252274b99864498e40dd6f, type: 3}
+      propertyPath: canJump
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739522383960950798, guid: 955e0b55b2252274b99864498e40dd6f, type: 3}
+      propertyPath: canSlide
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739522383960950798, guid: 955e0b55b2252274b99864498e40dd6f, type: 3}
       propertyPath: Sensitivity
       value: 8
       objectReference: {fileID: 0}
@@ -7087,7 +7099,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 18150e58101fc4b45afa20a23e1dda70, type: 3}
     - target: {fileID: 2739522383960950798, guid: 955e0b55b2252274b99864498e40dd6f, type: 3}
       propertyPath: crouchingHeight
-      value: 0.5
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739522383960950798, guid: 955e0b55b2252274b99864498e40dd6f, type: 3}
+      propertyPath: stanceTransitionSpeed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2739522384027401403, guid: 955e0b55b2252274b99864498e40dd6f, type: 3}
       propertyPath: m_CullingMask.m_Bits
@@ -17395,7 +17411,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -20457,6 +20473,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737321072}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!20 &739124563 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2323009155308412199, guid: e2a8b9fb568e1b949923f50af3dc7659, type: 3}
+  m_PrefabInstance: {fileID: 808202202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &739757022
 GameObject:
   m_ObjectHideFlags: 0
@@ -22741,7 +22762,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2323009154562101945, guid: e2a8b9fb568e1b949923f50af3dc7659, type: 3}
       propertyPath: Stamina
-      value: 250
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323009154562101945, guid: e2a8b9fb568e1b949923f50af3dc7659, type: 3}
+      propertyPath: canJump
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323009154562101945, guid: e2a8b9fb568e1b949923f50af3dc7659, type: 3}
+      propertyPath: canSlide
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2323009154562101945, guid: e2a8b9fb568e1b949923f50af3dc7659, type: 3}
       propertyPath: slideKey_L
@@ -22756,6 +22785,10 @@ PrefabInstance:
       value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 2323009154562101945, guid: e2a8b9fb568e1b949923f50af3dc7659, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 739124563}
+    - target: {fileID: 2323009154562101945, guid: e2a8b9fb568e1b949923f50af3dc7659, type: 3}
       propertyPath: toggleCrouch
       value: 0
       objectReference: {fileID: 0}
@@ -22765,11 +22798,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2323009154562101945, guid: e2a8b9fb568e1b949923f50af3dc7659, type: 3}
       propertyPath: crouchingHeight
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2323009154562101945, guid: e2a8b9fb568e1b949923f50af3dc7659, type: 3}
       propertyPath: crouchingEyeHeight
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323009154562101945, guid: e2a8b9fb568e1b949923f50af3dc7659, type: 3}
+      propertyPath: stanceTransitionSpeed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2323009154562101945, guid: e2a8b9fb568e1b949923f50af3dc7659, type: 3}
       propertyPath: slidingTransitionSpeed
@@ -32251,7 +32288,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -53476,7 +53513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae460bfd3c61e6f4aab4257562609e34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10.5
+  speed: 9.8
   isActive: 0
   deathScene: DeathCanvasCF
   jumpscareCamera: {fileID: 394756581}
@@ -60124,7 +60161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2165270343727760370}
   m_LocalRotation: {x: -0.50000006, y: -0.50000006, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -3.35, y: 4.4734073, z: -0.3}
+  m_LocalPosition: {x: -3.3321, y: 4.4734073, z: -0.3}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -60221,7 +60258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2165270343886926060}
   m_LocalRotation: {x: 0.49999985, y: 0.50000024, z: 0.5000001, w: -0.49999982}
-  m_LocalPosition: {x: 1.9, y: 4.4734073, z: -0.3}
+  m_LocalPosition: {x: 1.865, y: 4.4734073, z: -0.3}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
