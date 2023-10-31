@@ -1092,14 +1092,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'USE wasd TO MOVE, mouse TO LOOK AROUND, shift TO RUN AND c TO CROUCH.
+  m_text: 'USE wasd TO MOVE, mouse TO LOOK AROUND, shift TO RUN, c TO CROUCH, e TO
+    INTERACT/ENTER CLOSETS, q TO EXIT CLOSETS.
 
 
 
-
-
-    DON''T
-    LET ANYONE CATCH YOU AND PAY ATTENTION TO THE SOUNDS, LOOK FOR AN EXIT.'
+    DON''T LET ANYONE CATCH YOU
+    AND PAY ATTENTION TO THE SOUNDS, LOOK FOR AN EXIT.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}
   m_sharedMaterial: {fileID: 5774117657719988604, guid: 897cbd1d63f764647a84921e53f8732d, type: 2}

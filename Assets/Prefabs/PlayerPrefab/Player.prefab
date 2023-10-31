@@ -1345,7 +1345,7 @@ MonoBehaviour:
   audioSource: {fileID: 2739522383585141158}
   volume: 0.5
   counter: {fileID: 2739522383825396089}
-  format: 0/5
+  format: 0/3
   currentCount: 0
 --- !u!82 &2739522383585141158
 AudioSource:

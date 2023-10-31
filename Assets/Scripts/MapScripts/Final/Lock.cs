@@ -42,7 +42,7 @@ public class Lock : MonoBehaviour, IInteractable
                 lockOpen = true;
                 gameManager.unlockedLocks++;
 
-                if (gameManager.unlockedLocks == 5)
+                if (gameManager.unlockedLocks == 3)
                 {
                     OpenDoor();
                 }
