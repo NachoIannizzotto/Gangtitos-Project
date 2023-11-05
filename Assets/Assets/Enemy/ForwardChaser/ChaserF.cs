@@ -47,6 +47,7 @@ public class ChaserF : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         MusicManager.instance.DestroyMusicManager();
+        VHSManager.instance.DestroyVHS();
         SceneManager.LoadScene(deathScene);
     }
 }

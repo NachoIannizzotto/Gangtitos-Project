@@ -16,10 +16,14 @@ public class MainMenu : MonoBehaviour
             if (GameIsPaused)
             {
                 Resume();
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
             else
             {
                 Pause();
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
         }
     }
@@ -30,7 +34,6 @@ public class MainMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
 
-        // Restablece el cursor al estado por defecto
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -41,7 +44,6 @@ public class MainMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
 
-        // Permite que el cursor sea visible y desbloqueado en el menú de pausa
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -49,6 +51,7 @@ public class MainMenu : MonoBehaviour
     public void Quit()
     {
         MusicManager.instance.DestroyMusicManager();
+        VHSManager.instance.DestroyVHS();
         SceneManager.LoadScene(levelToLoad);
         Time.timeScale = 1f;
         GameIsPaused = false;

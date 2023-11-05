@@ -12,8 +12,8 @@ public class TeleportToAnotherLevel : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.None;
+            //Cursor.visible = true;
             MusicManager.instance.PlayMusic(newMusic);
             SceneManager.LoadScene(levelToLoad);
         }
